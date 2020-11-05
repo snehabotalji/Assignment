@@ -4,8 +4,8 @@ int Add(String numbers) throws InvalidNumber
 {
 	int size= numbers.length();
 	if(size>0 && numbers!=null)
-	{
-		String s1[] =numbers.replaceAll("\n","0").replaceAll("//","0").split(";");
+	{	String s2=Character.toString(numbers.charAt(2));
+		String s1[] =numbers.replaceAll("\n","0").replaceAll("//","0").split(s2);
 		int sum = 0;
 		int temp=0;
 		String s="";
