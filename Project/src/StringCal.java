@@ -3,7 +3,7 @@ public class StringCal {
 int Add(String numbers)
 {
 	int size= numbers.length();
-	if(size!=0)
+	if(size>0 && numbers!=null)
 	{
 		String s1[] =numbers.split(",");
 		int sum = 0;
