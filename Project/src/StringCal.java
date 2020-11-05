@@ -4,8 +4,15 @@ int Add(String numbers) throws InvalidNumber
 {
 	int size= numbers.length();
 	if(size>0 && numbers!=null)
-	{	String s2=Character.toString(numbers.charAt(2));
-		String s1[] =numbers.replaceAll("\n","0").replaceAll("//","0").split(s2);
+	{
+		String ss[]=numbers.replace("//", "").replace("[","").replace("]","").split("\n");
+		StringBuffer s3 =new StringBuffer();
+		for(int k=0;k<ss[0].length();k++)
+		{
+		s3=s3.append(ss[0].charAt(k));
+		}
+		String s1[] =ss[1].split("["+s3+"]");
+		//System.out.println(s3);
 		int sum = 0;
 		int temp=0;
 		String s="";
@@ -31,6 +38,6 @@ int Add(String numbers) throws InvalidNumber
 }
 public static void main(String[] args) throws InvalidNumber {
 	StringCal  scal=new StringCal();
-	System.out.println(scal.Add("//;1;\n1;2;6;1002"));
+	System.out.println(scal.Add("//[*][%]\n1%2*6*1%2"));
 }
 }
