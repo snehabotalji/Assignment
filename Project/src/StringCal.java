@@ -5,7 +5,7 @@ int Add(String numbers)
 	int size= numbers.length();
 	if(size>0 && numbers!=null)
 	{
-		String s1[] =numbers.split(",");
+		String s1[] =numbers.replaceAll("\n"," ").replaceAll(",", " ").split(" ");
 		int sum = 0;
 		for(int i=0;i<s1.length;i++)
 		{
