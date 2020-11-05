@@ -14,7 +14,6 @@ int Add(String numbers)
 		return sum;
 	}
 	return 0;
-
 }
 public static void main(String[] args) {
 	StringCal  scal=new StringCal();
