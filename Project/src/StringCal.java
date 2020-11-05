@@ -5,7 +5,7 @@ int Add(String numbers)
 	int size= numbers.length();
 	if(size>0 && numbers!=null)
 	{
-		String s1[] =numbers.replaceAll("\n"," ").replaceAll(",", " ").split(" ");
+		String s1[] =numbers.replaceAll("\n","0").replaceAll("//","0").split(";");
 		int sum = 0;
 		for(int i=0;i<s1.length;i++)
 		{
@@ -17,6 +17,6 @@ int Add(String numbers)
 }
 public static void main(String[] args) {
 	StringCal  scal=new StringCal();
-	System.out.println(scal.Add("1,2"));
+	System.out.println(scal.Add("//;\n1;2"));
 }
 }
