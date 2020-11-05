@@ -15,9 +15,12 @@ int Add(String numbers) throws InvalidNumber
 			if(temp<0) {
 				s=s+" "+temp;
 			}
+			else
+				if(temp>=0 && temp<=1000)
+				{
 			sum=sum+temp;
 		}
-		
+		}
 		if(s.length()>0)
 		{
 			throw new InvalidNumber(s);
@@ -28,6 +31,6 @@ int Add(String numbers) throws InvalidNumber
 }
 public static void main(String[] args) throws InvalidNumber {
 	StringCal  scal=new StringCal();
-	System.out.println(scal.Add("//;-1;\n1;2;-6"));
+	System.out.println(scal.Add("//;1;\n1;2;6;1002"));
 }
 }
